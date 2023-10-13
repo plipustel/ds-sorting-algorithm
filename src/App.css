@@ -1,0 +1,16 @@
+.numbers {
+  list-style: none;
+  display: flex;
+  margin: 0%;
+}
+
+.numbers li {
+  list-style: none;
+  display: flex;
+  border-color: blue;
+  border-style: solid;
+  padding: 1%;
+  margin: 0.5%;
+  font-size: 20px;
+  font-weight: bold;
+}
