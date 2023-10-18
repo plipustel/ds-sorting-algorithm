@@ -11,9 +11,6 @@ function App() {
   /* Unseroted Data */
   const unsortedData = [9, 1, 3, 2, 5, 6, 9, 4, 5, 7, 8];
 
-  /* Multiple by 2 */
-  const [multipleTwo, setMultipleTwo] = useState([...unsortedData]);
-
   /* Bubble Sort Data Array */
   const [bubbleSortData, setBubbleSortData] = useState([...unsortedData]);
 
@@ -21,17 +18,8 @@ function App() {
   const [selectionSortData, setSelectionSortData] = useState([...unsortedData]);
 
   const ResetNumbers = () => {
-    setMultipleTwo([...unsortedData]);
     setBubbleSortData([...unsortedData]);
     setSelectionSortData([...unsortedData]);
-  };
-
-  const MultipleByTwo = () => {
-    let arr = [];
-    for (let i = 0; i <= multipleTwo.length - 1; i++) {
-      arr.push(multipleTwo[i] * 2);
-    }
-    setMultipleTwo(arr);
   };
 
   /* 1. Bubble Sort 
@@ -89,7 +77,11 @@ function App() {
 
   return (
     <div>
-      <h3>Unsorted Data</h3>
+
+      <h1>Sorting Algorithms</h1>
+      <span>By Plipus Tel <a href="https://www.plipustel.com" target="_blank">https://www.plipustel.com</a></span>
+      <hr></hr>
+      <h3>Unsorted Data Array</h3>
       <ul className="numbers">
         {unsortedData.map((rows, index) => (
           <li className="items" key={index}>
@@ -97,19 +89,11 @@ function App() {
           </li>
         ))}
       </ul>
-
-      <h3>1.Multiple by Two</h3>
-      <button onClick={MultipleByTwo}>Multiple by Two (arr * 2)</button>
+      
       <button onClick={ResetNumbers}>Reset All Numbers</button>
-      <ul className="numbers">
-        {multipleTwo.map((rows, index) => (
-          <li className="items" key={index}>
-            {rows}
-          </li>
-        ))}
-      </ul>
+  
 
-      <h3>2. Bubble Sort</h3>
+      <h3>1. Bubble Sort</h3>
       <button onClick={BubbleSort}>Bubble Sort</button>
       <ul className="numbers">
         {bubbleSortData.map((rows, index) => (
@@ -128,6 +112,7 @@ function App() {
           </li>
         ))}
       </ul>
+     
     </div>
   );
 }
