@@ -1,6 +1,13 @@
 # ds-sorting-algorithm
 
-Intended for educational purpose only
+This source code implements the basic sorting algorithms to understand the fundamental of data structure, how we can sort a list of data array in several ways. 
+<ul>
+    <li><b>Bubble Sort</b> has complexity <code>O(n^2)</code></li>
+    <li></b>Selection Sort</b></li>
+    <li></b>Insertion Sort</b></li>
+    <li></b>Quick Sort</b></li>
+    <li></b>Merge Sort</b></li>
+</ul>
 
 # How To Setup
 
